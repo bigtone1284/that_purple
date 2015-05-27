@@ -5,6 +5,12 @@ body {
   font-family: Helvetica;
 }
 
+ul {
+	list-style-type: none;
+	position: relative;
+	top: 10%;
+}
+
 #container {
 	background: #000;
 	width: 100%;
@@ -38,6 +44,7 @@ body {
 	opacity: 0;
 	text-align: right;
 	z-index: -1;
+	border-radius: 10px; 
 }
 
 #modal.visible {
@@ -47,12 +54,30 @@ body {
 
 .visible div {
 	float: right;
+	width: 1em;
 	margin: .3em;
 	font-size: 2em;
-	padding: 0.5em;
-	border: 1px green solid;
+	border: 2px darkseagreen solid;
 	border-radius: 1.5em;
-	color: green;
+	color: white;
+	text-align: center;
+	transform:rotate(0deg);
+}
+
+.visible div:hover {
+	color: darkseagreen;
+	transition: transform 1s ease;
+  -ms-transform: rotate(180deg); /* IE 9 */
+  -webkit-transform: rotate(180deg); /* Safari */
+  transform: rotate(180deg);
+}
+
+.visible li {
+	text-align: left;
+	vertical-align: middle;
+	color: darkseagreen;
+	font-size: 1.5em;
+	padding: 0.5em;
 }
 
 #filter {
